@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #3d5ed4;
+    color: white;
+}
+
+header .logo h1 {
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+#home {
+    background-image: url('banner-image.jpg');
+    background-size: cover;
+    color: green;
+    padding: 100px 20px;
+}
+
+#home h2 {
+    font-size: 3em;
+}
+
+#home button {
+    padding: 10px 20px;
+    background-color: #3d5ed4;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#about, #courses, #admissions, #testimonials {
+    background-color: #8091f2;
+    margin: 20px 0;
+}
+
+.course-card {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color:#3d5ed4;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #3d5ed4;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+#admissions ul {
+    list-style: none;
+    padding: 0;
+}
+
+#admissions ul li {
+    margin: 15px 0;
+}
+
+#admissions ul li a {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #004aad;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#admissions ul li a:hover {
+    background-color: #003c8f;
+}
+
+
