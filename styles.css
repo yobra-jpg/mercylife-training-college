@@ -145,5 +145,17 @@ footer ul li a:hover {
 #admissions ul li a:hover {
     background-color: #003c8f;
 }
+/* Banner Image */
+.banner-image {
+    width: 100%; /* Make the banner image span the full width */
+    height: auto;
+}
+
+/* Logo Image */
+.logo-image {
+    width: 150px; /* Adjust logo size */
+    height: auto;  /* Maintain aspect ratio */
+}
+
 
 
