@@ -145,17 +145,97 @@ footer ul li a:hover {
 #admissions ul li a:hover {
     background-color: #003c8f;
 }
-/* Banner Image */
-.banner-image {
-    width: 100%; /* Make the banner image span the full width */
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+}
+
+/* Logo Styling */
+.logo-image {
+    width: 100px; /* Adjust size */
     height: auto;
 }
 
-/* Logo Image */
-.logo-image {
-    width: 150px; /* Adjust logo size */
-    height: auto;  /* Maintain aspect ratio */
+/* School Name Styling */
+.school-name h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 10px;
 }
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+/* Make the header responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Adjust logo size for smaller screens */
+    .logo-image {
+        width: 80px;
+    }
+
+    /* Adjust school name size */
+    .school-name h1 {
+        font-size: 20px;
+    }
+
+    /* Stack the navigation links vertically */
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjust the font size for very small screens */
+    .school-name h1 {
+        font-size: 18px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
 
 
 
