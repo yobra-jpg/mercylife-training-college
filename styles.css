@@ -243,4 +243,69 @@ nav ul li a:hover {
     height: auto;
     object-fit: cover; /* Ensure image covers the area */
 }
+body {
+    background-color: #007bff; /* Blue background */
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.login-container {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for form */
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745; /* Green button */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.footer {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #ddd;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
 
