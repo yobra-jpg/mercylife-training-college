@@ -243,4 +243,86 @@ nav ul li a:hover {
     height: auto;
     object-fit: cover; /* Ensure image covers the area */
 }
+/* Footer Styling */
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 30px 10px;
+    margin-top: 40px;
+}
+
+/* Main Footer Content Container */
+footer .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: flex-start; /* Align items to the top */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contact Information Section */
+.contact-info {
+    flex: 1; /* Takes 1 part of the space */
+    margin-right: 20px; /* Space between contact info and social handles */
+}
+
+/* Social Media Handles Section (Positioned to the Right) */
+.social-handles {
+    flex: 1; /* Takes 1 part of the space */
+    text-align: right; /* Align text to the right */
+    margin-left: 20px; /* Space between social handles and creator */
+}
+
+/* Creator Section */
+.creator {
+    flex: 1; /* Takes 1 part of the space */
+    text-align: right; /* Align to the right */
+}
+
+/* Contact Info Styling */
+.contact-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Social Media Handles Styling */
+.social-handles h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.social-handles p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Creator Styling */
+.creator p {
+    font-size: 14px;
+}
+
+/* Hover effect on creator text */
+.creator strong {
+    color: #FFD700; /* Gold color */
+    font-size: 16px;
+}
+
+/* Make footer sections stack on smaller screens */
+@media (max-width: 768px) {
+    footer {
+        font-size: 14px;
+    }
+
+    .footer-content {
+        flex-direction: column; /* Stack the sections vertically on mobile */
+        align-items: center; /* Center all items on mobile */
+    }
+
+    .contact-info, .social-handles, .creator {
+        flex: 1 100%; /* Make each section take full width on mobile */
+        text-align: center; /* Center text on small screens */
+        margin: 10px 0; /* Add spacing between sections */
+    }
+}
 
