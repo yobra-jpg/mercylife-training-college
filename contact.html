@@ -27,25 +27,27 @@
         </ul>
     </nav>
 </header>
-    <section id="Reach us">
-       <h2>Reach us at</h2>
-       <p> Phone No : 0711162999 or 0708764052</p>
-       
-       <p> Email : mercylife202@gmail.com</p>
-    </section>
-   
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions, feel free to reach out to us. We're here to help!</p>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-       <!-- Form -->
-<form id="contactForm" action="https://formspree.io/f/xkggkayn" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required><br>
-  <input type="email" name="email" placeholder="Your Email" required><br>
-  <textarea name="message" placeholder="Your Message" required></textarea><br>
-  <button type="submit">Send</button>
-</form>
+    <!-- Stylish Contact Form -->
+    <form id="contactForm" action="https://formspree.io/f/xkggkayn" method="POST" novalidate>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <small id="nameError" class="error-message"></small>
 
-<div id="formMessage" style="display:none; margin-top:10px;"></div>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <small id="emailError" class="error-message"></small>
+
+        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+        <small id="messageError" class="error-message"></small>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Message Display Area -->
+    <div id="formMessage" style="display:none; margin-top:10px;"></div>
+</section>
 
 <!-- JavaScript at the bottom -->
 <script>
