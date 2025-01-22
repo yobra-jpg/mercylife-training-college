@@ -321,4 +321,125 @@ footer .footer-content {
         margin: 10px 0; /* Add spacing between sections */
     }
 }
+/* Contact Form Container */
+#contact {
+    max-width: 600px;
+    margin: 40px auto; /* Center the form on the page */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    color: #3d5ed4;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Form Styles */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#contactForm input,
+#contactForm textarea,
+#contactForm button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Input Field Focus Styles */
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: #3d5ed4;
+    box-shadow: 0 0 5px rgba(61, 94, 212, 0.5);
+    outline: none;
+}
+
+/* Textarea Styling */
+#contactForm textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 120px;
+}
+
+/* Button Styles */
+#contactForm button {
+    background-color: #3d5ed4;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#contactForm button:hover {
+    background-color: #324cb0;
+    transform: scale(1.02);
+}
+
+/* Error Message Styling */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: none; /* Hidden by default */
+}
+
+/* Success/Error Message */
+#formMessage {
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: none; /* Hidden by default */
+}
+
+#formMessage.success {
+    color: green;
+    background-color: #e8f8e8;
+    border: 1px solid green;
+}
+
+#formMessage.error {
+    color: red;
+    background-color: #fdecea;
+    border: 1px solid red;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact {
+        padding: 15px;
+    }
+
+    #contactForm input,
+    #contactForm textarea,
+    #contactForm button {
+        font-size: 14px;
+    }
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: none; /* Hidden by default */
+}
 
