@@ -84,3 +84,24 @@ if (response.ok) {
         }
     });
 </script>
+document.addEventListener("DOMContentLoaded", function () {
+    const videoFiles = [
+        "video1.mp4",
+        "video2.mp4",
+        "video3.mp4"
+    ];
+
+    let currentIndex = 0;
+    const videoElement = document.getElementById("video-slideshow");
+
+    function playNextVideo() {
+        videoElement.src = videoFiles[currentIndex];
+        videoElement.play();
+
+        currentIndex = (currentIndex + 1) % videoFiles.length;
+
+        videoElement.onended = playNextVideo;
+    }
+
+    playNextVideo();
+});
