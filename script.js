@@ -105,3 +105,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     playNextVideo();
 });
+const slideshow = document.getElementById('slideshow');
+const slides = slideshow.getElementsByTagName('li');
+const totalSlides = slides.length;
+let currentSlide = 0;
+
+function showSlide(n) {
+  slides[currentSlide].style.transform = 'translateX(100%)';
+  currentSlide = (n + totalSlides) % totalSlides;
+  slides[currentSlide].style.transform = 'translateX(0)';
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}
+
+// Initial show
+showSlide(currentSlide);
+
+// Event listeners for next/previous buttons
+document.querySelector('.next').addEventListener('click', nextSlide);
+document.querySelector('.prev').addEventListener('click', prevSlide);
