@@ -87,65 +87,161 @@ nav ul li a:hover {
 
 /* Courses Section */
 #courses {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa; /* Light background for contrast */
 }
 
+/* Course Card Container */
 .course-card {
     background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 10px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    margin: 20px auto;
+    max-width: 400px; /* Controls width */
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Hover Effect */
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Course Card Title */
 .course-card h3 {
+    font-size: 1.5rem;
     color: #3d5ed4;
-    margin-bottom: 10px;
+    border-bottom: 3px solid #3d5ed4;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
 }
 
+/* Course List */
+.course-card p {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+    .course-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .course-card {
+        max-width: 300px;
+    }
+}
 /* Contact Section */
 #contact {
-    background: white;
-    padding: 40px;
-    width: 60%;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    padding: 50px 20px;
+    background: #f8f9fa;
 }
 
+/* Contact Form Container */
 #contactForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#contactForm input, 
+/* Input Fields */
+#contactForm input,
 #contactForm textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s ease-in-out;
 }
 
-button {
-    background-color: #3d5ed4;
-    color: white;
-    padding: 10px 20px;
+/* Input Focus Effect */
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border: 1px solid #3d5ed4;
+    outline: none;
+}
+
+/* Placeholder Styling */
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Submit Button */
+#contactForm button {
+    width: 100%;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
+    background: #3d5ed4;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.3s ease-in-out;
 }
 
-button:hover {
-    background-color: #2b4db3;
+/* Hover Effect */
+#contactForm button:hover {
+    background: #2c47a0;
+}
+
+/* Form Message */
+#formMessage {
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Success Message */
+#formMessage.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+/* Error Message */
+#formMessage.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #contactForm {
+        padding: 15px;
+    }
+    
+    #contactForm input,
+    #contactForm textarea {
+        font-size: 0.9rem;
+    }
+
+    #contactForm button {
+        font-size: 0.9rem;
+    }
 }
 
 /* Footer */
@@ -186,5 +282,68 @@ footer {
     
     #contact {
         width: 90%;
+    }
+}
+/* Banner Section */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Adjust this for better visibility */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image scales properly */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.banner h2, 
+.banner p,
+.banner button {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Button Styling */
+.banner button {
+    background-color: #3d5ed4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.banner button:hover {
+    background-color: #2b4db3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner {
+        height: 40vh; /* Adjust height for smaller screens */
+    }
+
+    .banner h2 {
+        font-size: 1.5rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
     }
 }
