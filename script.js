@@ -139,7 +139,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
-    navLinks.classList.toggle("show");
-}
+
