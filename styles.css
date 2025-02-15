@@ -347,3 +347,109 @@ footer {
         font-size: 1rem;
     }
 }
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+/* Hero Section */
+#hero {
+    background: url('images/banner.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background: #3d5ed4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #2c47a0;
+}
+
+/* About Section */
+#about {
+    text-align: center;
+    padding: 50px;
+    background: white;
+}
+
+/* Courses Section */
+#featured-courses {
+    text-align: center;
+    padding: 50px;
+    background: #eef1f8;
+}
+
+.courses-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.course {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* Why Choose Us */
+#why-choose-us {
+    text-align: center;
+    padding: 50px;
+}
+
+#why-choose-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Testimonials */
+#testimonials {
+    text-align: center;
+    padding: 50px;
+    background: #eef1f8;
+}
+
+.testimonial {
+    max-width: 500px;
+    margin: auto;
+    font-style: italic;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    padding: 50px;
+    background: white;
+}
+
+#contactForm {
+    max-width: 500px;
+    margin: auto;
+}
+
+#contactForm input, #contactForm textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#contactForm button {
+    width: 100%;
+}
