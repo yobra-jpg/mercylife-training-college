@@ -383,14 +383,7 @@ section {
     text-align: center;
 }
 
-/* Hero Section */
-#hero {
-    background: url('hero-banner.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-    border-radius: 10px;
-}
+
 
 .hero-content h1 {
     font-size: 2.5em;
