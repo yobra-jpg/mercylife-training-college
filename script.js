@@ -140,3 +140,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const errorMsg = document.getElementById('error-msg');
+
+    // Example credentials (you can replace these with a database check in a real application)
+    const validUsername = "student";
+    const validPassword = "password123";
+
+    if (username === validUsername && password === validPassword) {
+        // Redirect to the student dashboard
+        window.location.href = "dashboard.html"; // Change to your dashboard page
+    } else {
+        errorMsg.textContent = "Invalid username or password.";
+    }
+});
