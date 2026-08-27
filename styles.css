@@ -3455,3 +3455,69 @@ img, video, iframe { max-width: 100%; height: auto; }
         transition: none !important;
     }
 }
+
+
+/* =========================================
+   STUDENT PORTAL BUTTON
+========================================= */
+
+.portal-login-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 25px;
+    padding: 14px 28px;
+
+    background: #159fa3;
+    color: #ffffff !important;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none !important;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.portal-login-btn:hover {
+    background: #0d7f84;
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(21, 159, 163, 0.25);
+}
+
+.portal-login-btn i:first-child {
+    font-size: 16px;
+}
+
+.portal-login-btn i:last-child {
+    font-size: 13px;
+    transition: transform 0.3s ease;
+}
+
+.portal-login-btn:hover i:last-child {
+    transform: translateX(4px);
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .portal-login-btn {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px 20px;
+    }
+
+}
