@@ -179,43 +179,53 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ---- Intake Countdown ----
-// Set target date: 6 September 2026 (adjust when college confirms real date)
+// Target: 6 September 2026 at 8:00 AM Kenya time (UTC+3)
 (function () {
-    const target = new Date('2026-09-6T08:00:00+03:00').getTime();
+    const target = new Date('2026-09-06T08:00:00+03:00').getTime();
+
     const daysEl = document.getElementById('cd-days');
     const hoursEl = document.getElementById('cd-hours');
     const minsEl = document.getElementById('cd-mins');
     const secsEl = document.getElementById('cd-secs');
-    if (!daysEl) return;
 
-    function pad(n) { return String(n).padStart(2, '0'); }
+    if (!daysEl || !hoursEl || !minsEl || !secsEl) return;
+
+    function pad(n) {
+        return String(n).padStart(2, '0');
+    }
 
     function tick() {
         const now = Date.now();
         let diff = target - now;
-        if (diff < 0) {
+
+        if (diff <= 0) {
             daysEl.textContent = '0';
             hoursEl.textContent = '00';
             minsEl.textContent = '00';
             secsEl.textContent = '00';
             return;
         }
+
         const d = Math.floor(diff / 86400000);
         diff %= 86400000;
+
         const h = Math.floor(diff / 3600000);
         diff %= 3600000;
+
         const m = Math.floor(diff / 60000);
         diff %= 60000;
+
         const s = Math.floor(diff / 1000);
+
         daysEl.textContent = d;
         hoursEl.textContent = pad(h);
         minsEl.textContent = pad(m);
         secsEl.textContent = pad(s);
     }
+
     tick();
     setInterval(tick, 1000);
 })();
-
 // ---- Phase 3: Parallax hero ----
 (function () {
     const heroImg = document.getElementById('heroImage');
