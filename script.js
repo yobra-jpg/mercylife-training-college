@@ -179,9 +179,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ---- Intake Countdown ----
-// Target: 6 September 2026 at 8:00 AM Kenya time (UTC+3)
+// Target: 1 September 2026 at 8:00 AM Kenya time (UTC+3)
 (function () {
-    const target = new Date('2026-09-06T08:00:00+03:00').getTime();
+    const target = new Date('2026-09-01T08:00:00+03:00').getTime();
 
     const daysEl = document.getElementById('cd-days');
     const hoursEl = document.getElementById('cd-hours');
