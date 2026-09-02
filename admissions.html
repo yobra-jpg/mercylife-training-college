@@ -122,14 +122,120 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="course">Preferred Course *</label>
-                            <select id="course" name="course" required>
-                                <option value="">Select a course</option>
-                                <option value="Certified Nursing Assistant">Certified Nursing Assistant</option>
-                                <option value="Home Care Management">Home Care Management</option>
-                                <option value="Other Healthcare Program">Other Healthcare Program</option>
-                            </select>
-                        </div>
+    <label for="course">Preferred Course *</label>
+
+    <select id="course" name="course" required>
+        <option value="">Select a course</option>
+
+        <!-- ============================= -->
+        <!-- CERTIFICATE COURSES            -->
+        <!-- ============================= -->
+        <optgroup label="Certificate Courses">
+            <option value="Certified Nursing Assistant">
+                Certified Nursing Assistant
+            </option>
+
+            <option value="Phlebotomy">
+                Phlebotomy
+            </option>
+
+            <option value="Peri-operative Theatre Technology">
+                Peri-operative Theatre Technology
+            </option>
+
+            <option value="Billing / Claims Officer">
+                Billing / Claims Officer
+            </option>
+
+            <option value="Community Health Assistant">
+                Community Health Assistant
+            </option>
+
+            <option value="Introduction to ICT">
+                Introduction to ICT
+            </option>
+
+            <option value="Social Work">
+                Social Work
+            </option>
+
+            <option value="Home Care & Caregiving">
+                Home Care & Caregiving
+            </option>
+        </optgroup>
+
+
+        <!-- ============================= -->
+        <!-- DIPLOMA COURSES                -->
+        <!-- ============================= -->
+        <optgroup label="Diploma Courses">
+            <option value="Diploma in Peri-operative Theatre Technology">
+                Diploma in Peri-operative Theatre Technology
+            </option>
+
+            <option value="Diploma in Phlebotomy">
+                Diploma in Phlebotomy
+            </option>
+
+            <option value="Diploma in Billing & Claims Management">
+                Diploma in Billing & Claims Management
+            </option>
+
+            <option value="Diploma in Community Health">
+                Diploma in Community Health
+            </option>
+
+            <option value="Diploma in Social Work">
+                Diploma in Social Work
+            </option>
+        </optgroup>
+
+
+        <!-- ============================= -->
+        <!-- SHORT COURSES                  -->
+        <!-- ============================= -->
+        <optgroup label="Short Courses">
+            <option value="First Aid & Emergency Response">
+                First Aid & Emergency Response
+            </option>
+
+            <option value="Basic Life Support">
+                Basic Life Support
+            </option>
+
+            <option value="Elderly & Palliative Care">
+                Elderly & Palliative Care
+            </option>
+        </optgroup>
+
+
+        <!-- ============================= -->
+        <!-- COMING SOON                    -->
+        <!-- Visible but NOT selectable     -->
+        <!-- ============================= -->
+        <optgroup label="Coming Soon">
+            <option value="Catering & Hospitality" disabled>
+                Catering & Hospitality (Coming Soon)
+            </option>
+
+            <option value="Mortuary Science" disabled>
+                Mortuary Science (Coming Soon)
+            </option>
+
+            <option value="Childcare & Early Childhood Care" disabled>
+                Childcare & Early Childhood Care (Coming Soon)
+            </option>
+        </optgroup>
+
+
+        <!-- ============================= -->
+        <!-- OTHER                          -->
+        <!-- ============================= -->
+        <option value="Other / Not Listed">
+            Other / Not Listed
+        </option>
+    </select>
+</div>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="qualification">Highest Qualification</label>
