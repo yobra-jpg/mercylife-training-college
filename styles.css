@@ -3521,3 +3521,225 @@ img, video, iframe { max-width: 100%; height: auto; }
     }
 
 }
+
+/* =========================================================
+   MERCYLIFE VIDEO ADVERTISEMENT SECTION
+   ========================================================= */
+
+.ml-gallery-video-wrapper {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 35px;
+    align-items: stretch;
+    margin-top: 35px;
+}
+
+/* Gallery Side */
+.ml-gallery-side {
+    min-width: 0;
+}
+
+/* Video Side */
+.ml-video-side {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.ml-video-heading {
+    margin-bottom: 18px;
+}
+
+.ml-video-heading h3 {
+    margin: 8px 0 8px;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.ml-video-heading p {
+    margin: 0;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+/* Video Advertisement Box */
+.ml-video-ad-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #111;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Individual Slides */
+.ml-video-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.ml-video-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+/* Video */
+.ml-video-player {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    background: #111;
+}
+
+/* Navigation Buttons */
+.ml-video-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.88);
+    color: #333;
+
+    font-size: 20px;
+    line-height: 42px;
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.ml-video-btn:hover {
+    background: #3d5ed4;
+    color: #fff;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.ml-video-prev {
+    left: 15px;
+}
+
+.ml-video-next {
+    right: 15px;
+}
+
+/* Dots */
+.ml-video-dots {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    display: flex;
+    gap: 8px;
+
+    padding: 7px 11px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.ml-video-dot {
+    width: 9px;
+    height: 9px;
+
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.55);
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.ml-video-dot.active {
+    width: 25px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    .ml-gallery-video-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .ml-video-ad-container {
+        min-height: 450px;
+    }
+
+    .ml-video-player {
+        min-height: 450px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .ml-gallery-video-wrapper {
+        gap: 30px;
+        margin-top: 25px;
+    }
+
+    .ml-video-heading h3 {
+        font-size: 24px;
+    }
+
+    .ml-video-ad-container {
+        min-height: 330px;
+        border-radius: 14px;
+    }
+
+    .ml-video-player {
+        min-height: 330px;
+    }
+
+    .ml-video-btn {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 17px;
+    }
+
+    .ml-video-prev {
+        left: 10px;
+    }
+
+    .ml-video-next {
+        right: 10px;
+    }
+
+    .ml-video-dots {
+        bottom: 12px;
+    }
+
+}
