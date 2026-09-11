@@ -277,3 +277,122 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.remove('active');
     });
 })();
+
+
+/* =========================================================
+   MERCYLIFE VIDEO ADVERTISEMENT SLIDER
+   ========================================================= */
+
+(function () {
+
+    const videoSlides = document.querySelectorAll(".ml-video-slide");
+    const videoDots = document.querySelectorAll(".ml-video-dot");
+    const nextButton = document.querySelector(".ml-video-next");
+    const prevButton = document.querySelector(".ml-video-prev");
+
+    if (!videoSlides.length) return;
+
+    let currentVideo = 0;
+
+    function showVideo(index) {
+
+        if (index >= videoSlides.length) {
+            index = 0;
+        }
+
+        if (index < 0) {
+            index = videoSlides.length - 1;
+        }
+
+        currentVideo = index;
+
+        videoSlides.forEach(function (slide, i) {
+
+            slide.classList.remove("active");
+
+            const video = slide.querySelector(".ml-video-player");
+
+            if (video) {
+                video.pause();
+                video.currentTime = 0;
+            }
+
+            if (i === currentVideo) {
+                slide.classList.add("active");
+
+                if (video) {
+                    video.play().catch(function () {
+                        /* Browser may block autoplay */
+                    });
+                }
+            }
+
+        });
+
+        videoDots.forEach(function (dot, i) {
+            dot.classList.toggle("active", i === currentVideo);
+        });
+    }
+
+
+    function nextVideo() {
+        showVideo(currentVideo + 1);
+    }
+
+
+    function previousVideo() {
+        showVideo(currentVideo - 1);
+    }
+
+
+    /* Next button */
+    if (nextButton) {
+        nextButton.addEventListener("click", function () {
+            nextVideo();
+        });
+    }
+
+
+    /* Previous button */
+    if (prevButton) {
+        prevButton.addEventListener("click", function () {
+            previousVideo();
+        });
+    }
+
+
+    /* Dots */
+    videoDots.forEach(function (dot, index) {
+
+        dot.addEventListener("click", function () {
+            showVideo(index);
+        });
+
+    });
+
+
+    /* Automatically move to next video when current video ends */
+    videoSlides.forEach(function (slide, index) {
+
+        const video = slide.querySelector(".ml-video-player");
+
+        if (video) {
+
+            video.addEventListener("ended", function () {
+
+                if (index === currentVideo) {
+                    nextVideo();
+                }
+
+            });
+
+        }
+
+    });
+
+
+    /* Start with first video */
+    showVideo(0);
+
+})();
+
